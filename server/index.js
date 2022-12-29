@@ -2,12 +2,13 @@ const express =  require("express");
 const app = express();
 const mongoose = require('mongoose');
 const UserModel = require('./models/Users');
+const DeckModel = require('./models/Decks');
 const cors = require('cors');
 
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://lukegriley:Lukecake77@cluster0.lfjptoi.mongodb.net/flashcards?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://lukegriley:<<pwd>>@cluster0.lfjptoi.mongodb.net/flashcards?retryWrites=true&w=majority');
 
 app.get("/getUsers", (req,res) => {
     UserModel.find({}, (err, result) => {

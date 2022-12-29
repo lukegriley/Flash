@@ -36,6 +36,10 @@ function App() {
     });
   }
 
+  const saveDeck = () => {
+
+  }
+
   return (<div className="App">
     <div className="usersDisplay">
       {listOfUsers.map((user) =>{
@@ -60,6 +64,7 @@ function App() {
         }}/>
       <button onClick={createUser}>Create User</button>
     </div>
+    <Deck />
   </div>
   );
 }
